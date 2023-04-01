@@ -1,0 +1,103 @@
+body {
+  background-color: #000000;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="date"] {
+  background-color: #282828;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #008000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  background-color: #00ff00;
+}
+
+.binary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.binary div {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 2px;
+  background-color: #00ff00;
+  opacity: 0.8;
+  animation: fall 5s linear infinite;
+}
+
+.binary div:nth-child(1) {
+  top: -10%;
+  left: 1%;
+}
+
+.binary div:nth-child(2) {
+  top: -10%;
+  left: 10%;
+}
+
+.binary div:nth-child(3) {
+  top: -10%;
+  left: 20%;
+}
+
+/* Add more binary digits as needed */
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100vh);
+  }
+}

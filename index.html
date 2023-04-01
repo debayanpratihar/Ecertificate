@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Certificate Generator</h1>
+      <form action="generate-certificate.php" method="POST" onsubmit="generateCertificate(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="eventName">Event Name:</label>
+        <input type="text" id="eventName" name="eventName">
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate">
+        <input type="submit" value="Generate Certificate">
+      </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  </body>
+</html>
